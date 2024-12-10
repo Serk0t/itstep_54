@@ -1,0 +1,67 @@
+name = input("Введіть своє ім'я: ")
+age = input("Введіть свій вік: ")
+print(f"Привіт {name}, тобі {age}!")
+
+age = int(input("Введіть свій вік: "))
+if age > 18:
+    print("Вхід дозволено!")
+else:
+    print("Вхід заборонено!")
+
+import random
+number = random.randint(1, 10)
+for attempt in range(3):
+    guess = int(input("Вгадайте число від 1 до 10: "))
+    if guess < number:
+        print("Більше")
+    elif guess > number:
+        print("Менше")
+    else:
+        print("Ви вгадали!")
+        break
+else:
+    print(f"Ви програли! Загадане число було {number}.")
+
+start = int(input("Введіть початок діапазону: "))
+end = int(input("Введіть кінець діапазону: "))
+for number in range(start, end + 1):
+    print(number)
+
+n = int(input("Введіть число n: "))
+for number in range(n, 0, -1):
+    if number % 2 == 0:
+        print(number, end=" ")
+
+n = int(input("Введіть число: "))
+factorial = 1
+for i in range(1, n + 1):
+    factorial *= i
+print(f"Факторіал числа {n} = {factorial}")
+
+score = int(input("Введіть кількість балів: "))
+if score < 50:
+    print("Незадовільно")
+elif score < 70:
+    print("Задовільно")
+elif score < 90:
+    print("Добре")
+else:
+    print("Відмінно")
+
+a = float(input("Введіть перше число: "))
+b = float(input("Введіть друге число: "))
+operation = input("Введіть дію (+, -, *, /): ")
+if operation == "+":
+    print(f"Результат: {a + b}")
+elif operation == "-":
+    print(f"Результат: {a - b}")
+elif operation == "*":
+    print(f"Результат: {a * b}")
+elif operation == "/":
+    if b != 0:
+        print(f"Результат: {a / b}")
+    else:
+        print("Ділення на нуль!")
+else:
+    print("Невідома дія.")
+
